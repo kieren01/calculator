@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 564px; 
+    border: 2px solid black;
+}
+
+.display {
+    width: 360px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.reset {
+    display: flex;
+    gap: 15px;
+}
+
+.reset button {
+    width: 175px;
+    height: 50px;
+}
+
+.first-row, 
+.second-row,
+.third-row,
+.last-row {
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+    width: 360px;
+}
+
+.first-row-left,
+.second-row-left,
+.third-row-left,
+.last-row-left {
+    display: flex;
+    gap: 5px;
+}
+
+.first-row-left button,
+.second-row-left button,
+.third-row-left button, 
+.last-row-left button{
+    width: 85px;
+    height: 50px;
+}
+
+.first-row-right,
+.second-row-right,
+.third-row-right,
+.last-row-right {
+    display: flex;
+    gap: 5px;
+}
+
+.first-row-right button,
+.second-row-right button,
+.third-row-right button, 
+.last-row-right button {
+    width: 85px;
+    height: 50px;
+}
