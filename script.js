@@ -14,10 +14,11 @@ function divide(a, b) {
     return a / b;
 }
 
-let num1, num2, operatorActual;
+let num1, num2, operatorActual, result;
 num1 = '';
 num2 = ''; 
 operatorActual = '';
+result = 0;
 
 function operate(num1, num2, operator) {
     switch (operator) {
@@ -99,3 +100,12 @@ operators.forEach(operator => {
     })
 });
 
+
+clear = document.querySelector('.clear');
+clear.addEventListener('click', ()=> {
+    num1 = '';
+    num2 = '';
+    result = 0;
+    operatorActual = '';
+    display.textContent = '0'; 
+});
