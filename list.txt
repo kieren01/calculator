@@ -1,0 +1,4 @@
+Undone: 
+- working decimal button
+- working delete button 
+- bug where you can add trailing digits after result but old number is recorded 

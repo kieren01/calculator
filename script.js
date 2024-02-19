@@ -57,10 +57,17 @@ numbers.forEach(number => {
             display.textContent += num1;
             console.log("num1", num1);
         } else {
-            num2 = '';
-            num2 += number.innerHTML;
-            display.textContent += num2;
-            console.log("num2", num2);
+            if (operatorActual == "=") {
+                // num2 = "";
+                display.textContent += number.innerHTML;
+                num2 += number.innerHTML;
+                console.log("num2", num2);              
+            } else {
+                // num2 = '';
+                display.textContent += number.innerHTML;
+                num2 += number.innerHTML;
+                console.log("num2", num2);               
+            }
         }
     })
 });
@@ -73,10 +80,14 @@ operators.forEach(operator => {
             result = operate(Number(num1), Number(num2), operatorActual);
             result = roundToThreeDecimalPlaces(result);
             console.log("result", result);
+            if ((operatorActual =="÷") && (num2 =="0")) {
+                alert("You can't divide by 0!");
+            }
             operatorActual = "=";
             display.textContent += operatorActual;
             display.textContent += result;
             num1 = result; 
+            num2 = "";
         } 
         // non-equal sign selected
         else {
@@ -92,6 +103,7 @@ operators.forEach(operator => {
                 console.log("result", result);
                 display.textContent = result;
                 num1 = result; 
+                num2 = "";
             }
             operatorActual = operator.innerHTML;
             display.textContent += operatorActual;
@@ -109,3 +121,6 @@ clear.addEventListener('click', ()=> {
     operatorActual = '';
     display.textContent = '0'; 
 });
+
+
+
